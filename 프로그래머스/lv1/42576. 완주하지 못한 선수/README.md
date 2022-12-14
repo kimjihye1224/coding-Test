@@ -67,5 +67,8 @@
 
 <p><a href="http://hsin.hr/coci/archive/2014_2015/contest2_tasks.pdf" target="_blank" rel="noopener">출처</a></p>
 
-
+### 풀이
+자바
+1) ArrayList 사용하여 2개의 list sort 후 인덱스끼리 비교하여 다르면 return
+2) HashMap 사용하여 (partipant, 1) push. 동일 인물 있을 경우를 대비해 getOrDefault()함수 사용 -> (완주자, value -1) -> 0이 아닌 경우 return 
 > 출처: 프로그래머스 코딩 테스트 연습, https://programmers.co.kr/learn/challenges
