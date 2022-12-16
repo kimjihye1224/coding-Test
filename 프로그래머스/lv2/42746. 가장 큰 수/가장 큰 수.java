@@ -6,6 +6,8 @@ class Solution {
         
        String[] arr = new String[numbers.length];
        
+/*       for (int i=0; i<nums.length; i++) 
+            nums[i] = numbers[i] + "";*/
        for(int i = 0; i < numbers.length; i++){
            arr[i] = String.valueOf(numbers[i]);        
        }
