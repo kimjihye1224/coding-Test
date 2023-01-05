@@ -34,6 +34,14 @@ class Solution {
         }
         
         */
+        
+        /*
+               for(int i=0; i<babbling.length; i++){
+            if(babbling[i].matches("^(aya(?!aya)|ye(?!ye)|woo(?!woo)|ma(?!ma))+$")){
+                answer++;
+            }
+        }
+        */
         return answer;
     }
 }
