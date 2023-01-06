@@ -2,11 +2,16 @@ class Solution {
     public int[] solution(int num, int total) {
         int[] answer = new int[num];
         
-        int nSum = num * (1 + num) / 2;
-        int start = (total - nSum) / num;
+        int temp = 0;
+        for(int i = 0; i < num; i++){
+            temp += i;
+        }
+        
+        int start = (total - temp) / num;
 
-        for(int i=1; i<num+1; i++){
-                answer[i - 1] = i + start;
+        for(int i=0; i<num; i++){
+            answer[i] = start;
+            start++;
         }
         
         return answer;
