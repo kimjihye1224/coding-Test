@@ -14,7 +14,8 @@ public class Main {
 		
 		int count = 0;
 
-        while(n>=2 && m>=1 && m+n >=3+k){
+	//여학생 + 남학생의 수에서 팀으로 묶인 3명을 뺀 값이 인턴쉽으로 빠질 인원보다 크거나 같아야 팀 가능.
+        while(n>=2 && m>=1 && m+n-3 >=k){
             n = n-2;
             m= m-1;
             count++;
