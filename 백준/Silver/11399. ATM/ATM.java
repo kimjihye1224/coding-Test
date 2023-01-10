@@ -10,7 +10,6 @@ public class Main {
 		
 		int n = Integer.parseInt(br.readLine());
 		int[] time = new int[n];
-		int[] wait_t = new int[n];
 		
 		st = new StringTokenizer(br.readLine());
 		for(int i = 0; i < n; i++) {
