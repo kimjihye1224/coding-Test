@@ -8,5 +8,6 @@ class Solution {
         }
     
         return arrayList.stream().mapToInt(Integer::valueOf).toArray();
+        // return Arrays.stream(numList).filter(value -> value % n == 0).toArray();
     }
 }
