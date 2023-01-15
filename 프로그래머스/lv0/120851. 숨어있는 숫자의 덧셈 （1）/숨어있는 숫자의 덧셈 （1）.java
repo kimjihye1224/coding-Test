@@ -7,5 +7,6 @@ class Solution {
 			
 		}
         return answer;
+	//myString.chars().mapToObj(i -> (char) i).filter(Character::isDigit).map(String::valueOf).mapToInt(Integer::valueOf).sum();
     }
 }
