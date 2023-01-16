@@ -9,5 +9,6 @@ class Solution {
             else sb.append("2");
         }
         return sb.toString();
+        //return Arrays.stream(rsp.split("")).map(s -> s.equals("2") ? "0" : s.equals("0") ? "5" : "2").collect(Collectors.joining());
     }
 }
