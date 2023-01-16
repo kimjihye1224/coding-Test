@@ -11,5 +11,6 @@ class Solution {
             if(c >=97 && c <= 122)   sb.append((char)(c - 32));
         }
         return sb.toString();
+        // return myString.chars().mapToObj(operand -> String.valueOf((char) (Character.isLowerCase(operand) ? Character.toUpperCase(operand) : Character.toLowerCase(operand)))).collect(Collectors.joining());
     }
 }
