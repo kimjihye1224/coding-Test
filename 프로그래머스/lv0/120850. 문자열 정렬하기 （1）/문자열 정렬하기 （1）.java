@@ -17,5 +17,6 @@ class Solution {
         
         Arrays.sort(answer);
         return answer;
+        //return Arrays.strem(array.replaceAll("[A-Z|a-z]","").split("").sorted().mapToInt(Integer::parseInt).toArray();
     }
 }
