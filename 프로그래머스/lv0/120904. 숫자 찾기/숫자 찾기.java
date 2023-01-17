@@ -12,3 +12,6 @@ class Solution {
         return -1;
     }
 }
+
+
+//return ("-" + num).indexOf(String.valueOf(k));
