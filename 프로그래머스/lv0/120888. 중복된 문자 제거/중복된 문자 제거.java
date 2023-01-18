@@ -11,3 +11,6 @@ class Solution {
         return String.join("", li);
     }
 }
+
+
+//return Arrays.stream(my_string.split("")).distinct().collect(Collectors.joining());
