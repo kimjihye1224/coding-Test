@@ -6,3 +6,5 @@ class Solution {
         return String.valueOf(st);
     }
 }
+
+//return Arrays.stream(my_string.toLowerCase().split("")).sorted().collect(Collectors.joining());
