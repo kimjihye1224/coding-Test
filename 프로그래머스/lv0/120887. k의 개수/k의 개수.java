@@ -16,3 +16,14 @@ class Solution {
         return answer;
     }
 }
+
+
+public int solution(int i, int j, int k){
+    String str = "";
+    for(int h = i; h <= j; h++){
+        str += a+"";
+    }
+    
+    return str.length() - str.replace( k+"" , "").length();
+    
+}
