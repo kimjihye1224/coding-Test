@@ -8,7 +8,6 @@ class Solution {
 				if(prices[i] > prices[j]) break;
 			}
 		}
-		
         return answer;
     }
 }
