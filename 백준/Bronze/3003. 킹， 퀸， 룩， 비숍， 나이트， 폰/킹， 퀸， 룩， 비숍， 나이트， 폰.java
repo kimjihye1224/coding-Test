@@ -1,30 +1,25 @@
 import java.util.*;
- 
+import java.util.stream.Collectors;
+import java.io.*;
+
 public class Main {
-	public static void main(String[] args) {
-		
-		Scanner in = new Scanner(System.in);
-		
-		int king = 1;
-		int queen = 1;
-		int rook = 2;
-		int bishop = 2;
-		int knight = 2;
-		int pawn = 8;
- 
-		king = king - in.nextInt();
-		queen = queen - in.nextInt();
-		rook = rook - in.nextInt();
-		bishop = bishop - in.nextInt();
-		knight = knight - in.nextInt();
-		pawn = pawn - in.nextInt();
- 
-		System.out.print(king + " ");
-		System.out.print(queen + " ");
-		System.out.print(rook + " ");
-		System.out.print(bishop + " ");
-		System.out.print(knight + " ");
-		System.out.print(pawn);		
-		
+
+	public static void main(String[] args) throws IOException {
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+  //      StringBuilder sb = new StringBuilder();
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        
+        int[] chess = {1,1,2,2,2,8};
+        int[] c = new int[6];
+        
+        for(int i = 0; i < 6; i++) {
+        	c[i] = Integer.parseInt(st.nextToken());
+        }
+       
+		for(int i = 0; i < 6; i++) {
+			System.out.print((chess[i] - c[i]) + " ");
+		}
 	}
+
 }
