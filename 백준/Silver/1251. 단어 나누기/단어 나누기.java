@@ -7,33 +7,30 @@ import java.util.*;
 public class Main {
 	
 	static ArrayList<String> list = new ArrayList<>();
+	static String word;
 
     public static void main(String[] args) throws IOException {
     	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    	String word = br.readLine();
-    	String[] words = new String[3];
+    	word = br.readLine();
     	
     	for(int i = 1; i < word.length()-1; i++) {
     		for(int j = i+1; j < word.length(); j++) {
-    			words[0] = word.substring(0,i);
-    			words[1] = word.substring(i, j);
-    			words[2] = word.substring(j, word.length());
-    			
-    			StringBuffer sb = new StringBuffer();
-    			
-    			for(int k = 0; k < 3; k++){
-    				for(int l = words[k].length() - 1; l >= 0; l--) {
-    					sb.append(words[k].charAt(l) + "");
-    				}
-    			}
-    			
-    			list.add(sb.toString());
-    			sb.setLength(0);
+    			list.add(getReverse(i, j));
     		}
     	}
     	
     	Collections.sort(list);
     	System.out.println(list.get(0));
     
+    }
+    
+    private static String getReverse(int a, int b) {
+    	StringBuilder sb = new StringBuilder();
+    	StringBuilder s1 = new StringBuilder(word.substring(0, a));
+    	StringBuilder s2 = new StringBuilder(word.substring(a,b));
+    	StringBuilder s3 = new StringBuilder(word.substring(b));
+    	
+    	sb.append(s1.reverse()).append(s2.reverse()).append(s3.reverse());
+    	return sb.toString();
     }
 }
