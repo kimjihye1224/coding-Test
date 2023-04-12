@@ -3,6 +3,8 @@ import java.util.*;
 
 public class Main {
 
+	static int[] stack;
+	static int index = 0;
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -10,36 +12,64 @@ public class Main {
 		StringTokenizer st;
 
 		int n = Integer.parseInt(br.readLine());
-		Stack<Integer> stack = new Stack<>();
+		stack = new int[n];
 		while(n-- > 0) {
 			st = new StringTokenizer(br.readLine());
 			
-			String order = st.nextToken();
+			switch(st.nextToken()) {
+			case "push":
+				push(Integer.parseInt(st.nextToken()));
+				break;
+			case "pop":
+				sb.append(pop()).append('\n');
+				break;
+			case "size":
+				sb.append(size()).append('\n');
+				break;
+			case "top":
+				sb.append(top()).append('\n');
+				break;
+			case "empty":
+				sb.append(empty()).append('\n');
+				break;
 			
-			if(order.equals("push")) {
-				stack.push(Integer.parseInt(st.nextToken()));
 			}
-			else if(order.equals("top")) {
-				if(stack.size() == 0)
-					System.out.println(-1);
-				else
-					System.out.println(stack.peek());
-			}
-			else if(order.equals("size"))
-				System.out.println(stack.size());
-			else if(order.equals("empty")) {
-				if(stack.size() == 0)
-					System.out.println(1);
-				else
-					System.out.println(0);
-			}else {
-				if(stack.size() == 0)
-					System.out.println(-1);
-				else
-					System.out.println(stack.pop());
-			}
+			
 		}
 		
+		System.out.println(sb);
 	}
-
+	
+	public static void push(int x) {
+		stack[index++] = x;
+	}
+	
+	public static int pop() {
+		if(index != 0) {
+			int x = stack[index - 1];
+			stack[index-1] = 0;
+			index--;
+			return x;
+		}
+		
+		return -1;
+	}
+	
+	public static int size() {
+		
+		return index;
+	}
+	
+	public static int top() {
+		if(index != 0) {
+			return stack[index -1 ];
+		}
+		return -1;
+	}
+	
+	public static int empty() {
+		if(index == 0)
+			return 1;
+		return 0;
+	}
 }
