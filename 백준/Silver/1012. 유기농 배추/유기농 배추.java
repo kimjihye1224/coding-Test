@@ -13,7 +13,7 @@ public class Main {
 	static int[] dy = { 1, 0, -1, 0 };
 
 	static void dfs(int x, int y) {
-		visit[x][y] = true;
+		cabbage[x][y] = 0;
 
 		for (int i = 0; i < 4; i++) {
 			int cx = x + dx[i];
@@ -52,7 +52,7 @@ public class Main {
 
 			for (int x = 0; x < M; x++) {
 				for (int y = 0; y < N; y++) {
-					if (cabbage[x][y] == 1 && !visit[x][y]) {
+					if (cabbage[x][y] == 1) {
 						dfs(x, y);
 						count++;
 					}
